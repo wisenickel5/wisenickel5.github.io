@@ -1,97 +1,113 @@
-\documentclass[10pt, letterpaper]{article}
-\usepackage[margin=0.6in]{geometry} % Adjust margins to fit one page
-\usepackage{lmodern}
-\usepackage{enumitem}
-\usepackage{changepage}
-\usepackage[dvipsnames]{xcolor}
-\definecolor{primaryColor}{RGB}{0, 79, 144}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=primaryColor}
-\pagestyle{empty}
-\setlength{\parskip}{0pt}
+\documentclass[a4paper,10pt]{article}
 
+%---------------------------%
+%   PACKAGES & CONFIG
+%---------------------------%
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule\vspace{-4pt}]
+
+%---------------------------%
+%   HEADER
+%---------------------------%
 \begin{document}
 
-
-% ----------------------------
-% Header: Name and Contact
-% ----------------------------
 \begin{center}
-    {\LARGE \textbf{Dylan Alexander}} \\[4pt]
-    \href{mailto:dylanjalexander2@gmail.com}{dylanjalexander2@gmail.com} \quad
-    \href{tel:7703431748}{(770) 343-1748} \quad
-    \href{https://github.com/wisenickel5}{GitHub} \quad
-    \href{https://linkedin.com/in/yourusername}{LinkedIn}
+    {\LARGE \textbf{Dylan Alexander}} \\
+    \vspace{3pt}
+    \faPhone\ (770) 343-1748 \quad
+    \faEnvelope\ \href{mailto:dylanjalexander2@gmail.com}{dylanjalexander2@gmail.com} \quad
+    \faMapMarker*\ Atlanta, GA \\
+    \vspace{3pt}
+    \href{https://linkedin.com}{LinkedIn} \quad | \quad
+    \href{https://github.com}{GitHub}
 \end{center}
 
-
-
-% ----------------------------
-% Role
-% ----------------------------
-\begin{center}
-    \textbf{Senior Machine Learning Engineer}
-\end{center}
-
-\vspace{0.3 cm}
-
-
-
-% ----------------------------
-% Profile
-% ----------------------------
+%---------------------------%
+%   PROFILE
+%---------------------------%
 \section*{Profile}
-Senior Machine Learning Engineer with expertise in GPU-accelerated ML systems and high-performance microservices. Proven leader in scalable architecture, driving enterprise AI adoption through precision engineering and impactful mentorship. Experienced in bridging research to production with measurable outcomes.
+Senior Machine Learning Engineer specializing in productizing researcher prototypes into scalable, GPU-accelerated microservices. Recognized for delivering business-aligned AI solutions by uniting researchers with product management.
 
-\vspace{0.3 cm}
+%---------------------------%
+%   EXPERIENCE
+%---------------------------%
+\section*{Professional Experience}
 
-
-
-% ----------------------------
-% Experience
-% ----------------------------
-\section*{Experience}
-
-\textbf{NICE Ltd. (NASDAQ: NICE)} \hfill \textit{Lead R\&D Developer} \hfill Atlanta, GA\\
-\textit{Apr 2022 - Present}
-\begin{itemize}
-    \item Lead developer of the Text Analysis Satellite, enabling clients to derive insights from conversational data at scale.
-    \item Increased NLP model accuracy by 30\%, directly enhancing outcomes across thousands of enterprise users.
-    \item Proven track record in transforming NLP research POCs into production-ready features.
-    \item Leveraged CUDA-based parallelism and asynchronous streaming to reduce latency by 35\%.
-    \item Mentored junior engineers and grew a high-performance engineering team aligned with business goals.
+\textbf{NiCE (NASDAQ: NICE)} \hfill \textit{Atlanta, GA} \\
+\textit{Senior R\&D Software Engineer} \hfill Apr 2022 -- Present \\
+\textit{Technologies: Python, gRPC, Docker, SentenceTransformers, FAISS, AWS Bedrock, AWS ECS, S3}
+\begin{itemize}[leftmargin=*]
+    \item Lead development of “Topic Detection” API, a Python microservice embedded across the CXOne Platform, serving analytics to 1000+ enterprise clients and processing millions of conversations daily.
+    \item Productized NLP researcher POCs into containerized, GPU-optimized applications that scaled into production-ready services, improving throughput by orders of magnitude.
+    \item Architected ML workflows bridging product and research teams, improving topic detection accuracy and driving adoption of advanced API features.
+    \item Standardized research-to-production pipelines via a gRPC Python template repo, reducing prototype-to-deployment from months to weeks.
+    \item Benchmarked performance at production scale with sandbox pipelines monitoring latency, throughput, and GPU/CPU utilization.
 \end{itemize}
 
-\vspace{0.2 cm}
-
-\noindent\textbf{Carter + Clark} \hfill \textit{R\&D Software Developer} \hfill Duluth, GA\\
-\textit{Mar 2021 - Apr 2022}
-\begin{itemize}
-    \item Streamlined the autonomous generation of spatial data for permit drawings.
-    \item Maintained OOP principles in procedural AutoCAD .NET APIs for 3D modeling.
-    \item Contributed to open-source projects and algorithm optimization insights.
+\vspace{4pt}
+\textbf{Carter + Clark} \hfill \textit{Duluth, GA} \\
+\textit{R\&D Software Engineer} \hfill Mar 2021 -- Apr 2022 \\
+\textit{Technologies: C\#, .NET Framework, AutoCAD .NET API, Jenkins}
+\begin{itemize}[leftmargin=*]
+    \item Engineered \textbf{DynamiCAD}, an in-house permit drawing automation tool adopted company-wide.
+    \item Reduced manual drafting time by \textbf{~78\%} by automating geometric computation algorithms for house plan generation.
+    \item Designed advanced spatial algorithms for rotation, scaling, and centering across variable lot orientations.
+    \item Drove iterative development cycles, implemented CI/CD pipelines, and collaborated with drafting teams for refinement.
 \end{itemize}
 
-\vspace{0.2 cm}
-
-\noindent\textbf{173rd Airborne Brigade, US Army} \hfill \textit{Geospatial Engineer} \hfill Vicenza, Italy\\
-\textit{Jun 2018 - Jun 2020}
-\begin{itemize}
-    \item Analyzed and organized dynamic geospatial datasets for mission-critical operations.
-    \item Delivered GIS products to support combat leaders during high-stress airborne operations.
+\vspace{4pt}
+\textbf{ManDeo Consultancy} \hfill \textit{Atlanta, GA} \\
+\textit{Full Stack Developer} \hfill Jun 2020 -- Mar 2021 \\
+\textit{Technologies: LAMP Stack, JavaScript, PHP, MySQL, Square API}
+\begin{itemize}[leftmargin=*]
+    \item Designed and launched 10+ client-facing web apps including Scofflaw Brewing’s e-commerce site with Square API integration.
 \end{itemize}
 
+\vspace{4pt}
+\textbf{173rd Airborne Brigade, U.S. Army} \hfill \textit{Vicenza, Italy} \\
+\textit{Geospatial Engineer} \hfill Jun 2018 -- Jun 2020 \\
+\textit{Technologies: Python, GeoPandas, ArcGIS, Satellite Imagery}
+\begin{itemize}[leftmargin=*]
+    \item Developed data pipelines for cleaning and analyzing geospatial datasets to detect terrain and troop movement.
+    \item Produced mission-critical cartographic products supporting NATO/EUCOM operational planning.
+\end{itemize}
 
-\vspace{0.3 cm}
+%---------------------------%
+%   EDUCATION
+%---------------------------%
+\section*{Education \& Certifications}
+\textbf{University of Georgia} \hfill \textit{Athens, GA} \\
+Professional MBA, Leadership
 
+\textbf{Kennesaw State University} \hfill \textit{Kennesaw, GA} \\
+Bachelor of Science, Computer Science (AI \& ML)
 
-
-% ----------------------------
-% Education
-% ----------------------------
-\section*{Education}
-\textbf{University of Georgia} \hfill \textit{Professional Master's in Business Administration} \\
-
-\noindent\textbf{Kennesaw State University} \hfill \textit{BS, Computer Science (AI \& ML)} \\
+\vspace{4pt}
+AWS Cloud Practitioner (Mar 2021) \quad | \quad GEOINT Professional (Nov 2020) \quad | \quad Security Clearance: TS/SCI (Jan 2019)
 
 \end{document}
